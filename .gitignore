@@ -2,5 +2,5 @@
 ignore
 *.png
 upload
-static/icon
-static/img
+dist/static/icon
+dist/static/img
