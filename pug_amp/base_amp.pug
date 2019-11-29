@@ -1,0 +1,22 @@
+doctype html
+html(⚡) 
+    block vars
+    head
+        meta(charset='utf-8')
+        script(async='' src='https://cdn.ampproject.org/v0.js')
+        link(rel='canonical' href='#{canonical}')
+        meta(name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1')
+        meta(name='description', content='#{description}')
+        meta(name='theme-color' content='#000000')
+        title #{title}
+        link(rel='icon' type='image/png' sizes='32x32' href='static/icon/favicon-32x32.png')
+
+        block fonts
+        include amp_boilerplate.pug
+        style(amp-custom='')
+            include custom_css.pug
+        include scripts.pug
+
+    body
+        block content
+        block footer

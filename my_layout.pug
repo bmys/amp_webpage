@@ -1,0 +1,15 @@
+extends pug_amp/base_amp
+
+block content
+    include pug_components/header
+    include pug_components/sidebar
+    include pug_components/main
+
+block footer
+    footer
+        amp-img(alt='board' src='static/svg/board.svg' width='128' height='128')
+
+
+block vars
+    - var title = 'Knight Klub Szachowy'
+    - var description = 'Klub szachowy łączący studentów politechnki łódzkiej w wspólnej pasji jaką są szachy'
