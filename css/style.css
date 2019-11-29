@@ -197,10 +197,6 @@ amp-list div[role='list'] {
   color: black
 }
 
-.url-entry > a{
-  color: black;
-}
-
 #members{
   background: #000;
   color: #fff;
@@ -222,13 +218,50 @@ amp-sidebar{
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.4em
+  font-size: 1.2em;
+  background-image: url("static/svg/board.svg");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 amp-sidebar > ul{
-  padding: 0;
+  padding-top: 15px;
+  padding-left: 15px;
 }
 
 amp-sidebar > ul > li > ul{
   padding: 5px 10px 10px 10px;
   font-size: 0.8em
 }
+
+.user-entry {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 0.5fr 0.25fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 10px;
+  /* grid-template-areas: "photo about" "stas about"; */
+  color: white;
+}
+
+.photo {
+  grid-area: 1 / 1 / 2 / 2;
+  
+  }
+  .photo-inner{
+    border: 2px solid white;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 180px;
+  }
+  .photo-inner > amp-img{
+    border-radius: 180px;
+  }
+
+
+.about { grid-area: 1 / 2 / 3 / 3; }
+.about > h3{
+  margin-top: 0;
+}
+.stats { grid-area: 2 / 1 / 3 / 2;  }

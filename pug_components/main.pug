@@ -9,10 +9,19 @@ main.font-roboto
   .divider-chess
   section#members   
     h3 Członkowie  
-    amp-list(credentials="include" width='auto' height='100' layout='fixed-height' src='static/data/players.json')
+    amp-list(credentials="include" width='auto' height='800' layout='fixed-height' src='static/data/players.json')
       template(type='amp-mustache')
-        .url-entry(amp-fx="fade-in" data-duration="2000ms" data-easing="cubic-bezier(0.40, 0.00, 0.40, 1.00)")
-          a(href='{{url}}') {{title}}
+        .user-entry(amp-fx="fade-in" data-duration="2000ms" data-easing="cubic-bezier(0.40, 0.00, 0.40, 1.00)")
+          .photo
+            .photo-inner
+              amp-img(src='{{photo}}' width='200' height='200' alt='an image')
+          
+          .about
+            h3
+              | {{name}}
+            | {{about}}
+          .stats
+            | {{stats}}
     
   amp-fx-flying-carpet(height='300px')
     amp-img(src='/static//img/chess.webp' width='1920' height='1080' alt='an image')
