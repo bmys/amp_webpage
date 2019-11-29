@@ -4,19 +4,19 @@
 	"name": "Garri Kasparow",
         "photo": "static/img/kasparov.png",
 	"about": "Garri Kimowicz Kasparow, ros. Гарри Кимович Каспаров, właśc. Garrik Weinstein (ur. 13 kwietnia 1963 w Baku) – rosyjski szachista, trener szachowy (FIDE Senior Trainer od 2009) i polityk ormiańsko-żydowskiego pochodzenia, mistrz świata w latach 1985–1993, kandydat na prezydenta Rosji w 2008 roku",
-	"stats": "18:3"
+	
       },
   {
 	"name": "Franciszek Borkowski",
         "photo": "static/img/borkowski.png",
 	"about": "polski szachista, mistrz międzynarodowy od 1980 roku. Jest synem Ludwika Borkowskiego.",
-	"stats": "18:3"
+
       },
   {
 	"name": "Garri Kasparow",
         "photo": "static/img/kasparov.png",
 	"about": "Garri Kimowicz Kasparow, ros. Гарри Кимович Каспаров, właśc. Garrik Weinstein (ur. 13 kwietnia 1963 w Baku) – rosyjski szachista, trener szachowy (FIDE Senior Trainer od 2009) i polityk ormiańsko-żydowskiego pochodzenia, mistrz świata w latach 1985–1993, kandydat na prezydenta Rosji w 2008 roku, lider Zjednoczonego Frontu Obywatelskiego. Od marca 2014 posiada również obywatelstwo chorwackie",
-	"stats": "18:3"
+
       }
     ]
   }
