@@ -1,6 +1,29 @@
 main.font-roboto
-  h3 O nas
-  p
-    | Jeste&sacute;my klubem szachowym politechniki &lstrok;&oacute;dzkiej, &lstrok;&aogon;czy nas mi&lstrok;o&sacute;&cacute; do kr&oacute;lewskiej gry jak&aogon; s&aogon; szachy oraz
-    | nieustanna che&cacute;&nbsp;rywalizacji oraz
-    | zwi&eogon;kszania w&lstrok;asnych umiej&eogon;tno&sacute;ci w tej wspania&lstrok;ej grze.
+  amp-youtube(autoplay loop data-videoid='8D_rLRqFEnE' layout='responsive' width='1920' height='1080')
+  section#aboutus
+    h1 O nas
+    p
+      | Jeste&sacute;my klubem szachowym politechniki &lstrok;&oacute;dzkiej, &lstrok;&aogon;czy nas mi&lstrok;o&sacute;&cacute; do kr&oacute;lewskiej gry jak&aogon; s&aogon; szachy oraz
+      | nieustanna che&cacute;&nbsp;rywalizacji oraz
+      | zwi&eogon;kszania w&lstrok;asnych umiej&eogon;tno&sacute;ci w tej wspania&lstrok;ej grze.
+  .divider-chess
+  section#members   
+    h3 Członkowie  
+    amp-list(credentials="include" width='auto' height='100' layout='fixed-height' src='static/data/players.json')
+      template(type='amp-mustache')
+        .url-entry(amp-fx="fade-in" data-duration="2000ms" data-easing="cubic-bezier(0.40, 0.00, 0.40, 1.00)")
+          a(href='{{url}}') {{title}}
+    
+  amp-fx-flying-carpet(height='300px')
+    amp-img(src='/static//img/chess.webp' width='1920' height='1080' alt='an image')
+
+  section
+    h3 Kontakt
+    p.social-share
+      amp-social-share(type='twitter' width='60' height='44')
+      amp-social-share(type='facebook' width='60' height='44' data-attribution='254325784911610')  
+      amp-social-share(type='email' width='60' height='44')
+      amp-social-share(type='pinterest' width='66' height='44')
+      amp-social-share(type='system' width='66' height='44')
+
+    amp-iframe(title='Embedded Google map' width='400' height='200' layout='responsive' sandbox='allow-scripts allow-same-origin allow-popups' frameborder='0' src='https://www.google.com/maps/embed/v1/place?&q=iceland')

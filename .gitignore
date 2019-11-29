@@ -3,3 +3,4 @@ ignore
 *.png
 upload
 static/icon
+static/img

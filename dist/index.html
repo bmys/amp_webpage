@@ -48,126 +48,205 @@ visibility: visible
 -moz-animation: none;
 -ms-animation: none;
 animation: none
-}</style></noscript><style amp-custom="">
-  body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    }
-    header{
-    display: flex;
-    background-color: black;
-    color: white;
-    }
-    #header-xs{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: none;
-    z-index: 2147483647;
-    padding: 2px;
-    }
-    #header-xs > .font-logo{
-    flex: 1;
-    }
-    .title {
-    background-color: lightblue;
-    padding: 0.5em;
-    margin: 0;
-    }
-    amp-mega-menu>nav {
-    background: #000;
-    color: white;
-    }
-    amp-mega-menu>nav>ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-inline-start: 10px;
-    }
-    amp-mega-menu>nav>ul>li {
-    margin-right: 15px;
-    }
-    amp-mega-menu .menu-item[open]>span {
-    background-color: black;
-    }
-    amp-mega-menu .menu-item[open]>div {
-    left: 10px;
-    right: 10px;
-    width: auto;
-    }
-    a {
-    text-decoration: none;
-    }
-    a:visited {
-    color: #fff;
-    text-decoration: none;
-    }
-    .flex-center {
-    display: flex;
-    align-items: center;
-    }
-    .content-menu {
-    top: 46px;
-    background: black;
-    }
-    .content {
-    position: absolute;
-    height: 128px;
-    bottom: 0;
-    right: 0;
-    }
-    .max-h {
-    min-height: 100vh;
-    }
-    .font-logo {
-    font-size: 1.4em
-    }
-    footer {
-    background: #000;
-    height: 128px;
-    }
-    footer>amp-img {
-    float: right;
-    }
-    main {
-    flex: 1;
-    padding: 15px;
-    }
-    amp-mega-menu{
-    flex: 1;
-    }
-    amp-mega-menu .menu-item[open] > div {
-    background: #000;
-    }
-    .sidebar-open-btn {
-    font-size: 2em;
-    display: none;
-    }
-    @media (max-width: 500px) {
-    #hide-xs, #header-xl{
-    display: none;
-    }
-    .sidebar-open-btn {
-    display: block;
-    }
-    #header-xs{
-    display: flex;
-    }
-    }
-    #sidebar{
-    top: 40px;
-    }
-  
-    .font-roboto {
-    font-family: 'Roboto', sans-serif;
-    }
+}</style></noscript><style amp-custom="">body
+{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-    a{
-        color: white;
-    }.hamburger {
+header
+{
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+#header-xs
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 2147483647;
+  padding: 2px;
+}
+
+#header-xs > .font-logo
+{
+  flex: 1;
+}
+
+.title
+{
+  background-color: lightblue;
+  padding: 0.5em;
+  margin: 0;
+}
+
+amp-mega-menu>nav
+{
+  background: #000;
+  color: white;
+}
+
+amp-mega-menu>nav>ul
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-inline-start: 10px;
+}
+
+amp-mega-menu>nav>ul>li
+{
+  margin-right: 15px;
+}
+
+amp-mega-menu .menu-item[open]>span
+{
+  background-color: black;
+}
+
+amp-mega-menu .menu-item[open]>div
+{
+  left: 10px;
+  right: 10px;
+  width: auto;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+a:visited
+{
+  color: #fff;
+  text-decoration: none;
+}
+
+.flex-center
+{
+  display: flex;
+  align-items: center;
+}
+
+.content-menu
+{
+  top: 46px;
+  background: black;
+}
+
+.content
+{
+  position: absolute;
+  height: 128px;
+  bottom: 0;
+  right: 0;
+}
+
+.max-h
+{
+  min-height: 100vh;
+}
+
+.font-logo
+{
+  font-size: 1.4em;
+}
+
+footer
+{
+  background: #000;
+  height: 128px;
+}
+
+footer>amp-img
+{
+  float: right;
+}
+
+main
+{
+  flex: 1;
+  padding: 15px 150px;
+}
+
+amp-mega-menu
+{
+  flex: 1;
+}
+
+amp-mega-menu .menu-item[open] > div
+{
+  background: #000;
+}
+
+.sidebar-open-btn
+{
+  font-size: 2em;
+  display: none;
+}
+
+@media (max-width: 500px)
+{
+  #hide-xs, #header-xl
+  {
+    display: none;
+  }
+
+  .sidebar-open-btn
+  {
+    display: block;
+  }
+
+  #header-xs
+  {
+    display: flex;
+  }
+
+  main{
+    margin-top: 44px;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1200px)
+{
+  main{
+    padding: 0 350px;
+  }
+}
+
+#sidebar
+{
+  top: 44px;
+  width: 50vw;
+}
+
+ul
+{
+  list-style: none;
+}
+
+
+.font-roboto
+{
+  font-family: 'Roboto', sans-serif;
+}
+
+a
+{
+  color: white;
+}
+
+amp-list div[role='list'] {
+  display: grid;
+  grid-gap: 0.5em;
+}.hamburger {
     padding: 0px 15px;
     display: inline-block;
     cursor: pointer;
@@ -232,6 +311,8 @@ animation: none
     opacity: 0; }
     .hamburger--elastic.is-active .hamburger-inner::after {
     transform: translate3d(0, -20px, 0) rotate(-270deg);
-    transition-delay: 0.075s; }</style><script async="" custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async="" custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script><script async="" custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script><script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script><script async="" custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script><script async="" custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async="" custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script></head><body><header id="header-xl"><amp-mega-menu id="menu" height="46" layout="fixed-height"><nav style="display: flex;flex-direction: row; height: 100%; align-items: center;"><ul id="hide-xs"><li><span class="flex-center font-logo"><amp-img alt="A view of the sea" src="static/svg/chess-knight-solid.svg" width="40" height="40"></amp-img>Knight</span></li><li class="menu-item font-roboto"><span role="button">O nas</span><div class="content-menu" role="dialog"><ul><li>item 1</li><li>item 2</li><li>item 3</li></ul></div></li><li class="menu-item font-roboto"><a href="wydarzenia.html">Wydarzenia</a></li><li class="menu-item font-roboto"><a href="https://amp.dev/">Do&lstrok;&aogon;cz do nas</a></li></ul></nav></amp-mega-menu></header><header id="header-xs"><span class="flex-center font-logo"><amp-img alt="A view of the sea" src="chess-knight-solid.svg" width="40" height="40"></amp-img>Knight</span><button class="sidebar-open-btn hamburger hamburger--elastic" id="list" on="tap:sidebar.toggle"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></header><amp-sidebar id="sidebar" layout="nodisplay" side="right" on="sidebarClose:list.toggleClass(class='is-active'); sidebarOpen:list.toggleClass(class='is-active')"><ul><li>Nav item 1</li><li>Nav item 3</li><li>Nav item 5</li><li>Nav item 6</li></ul></amp-sidebar><main><p class="font-roboto"></p><h3>O nas</h3>      Jeste&sacute;my klubem szachowym politechniki &lstrok;&oacute;dzkiej, &lstrok;&aogon;czy nas mi&lstrok;o&sacute;&cacute; do kr&oacute;lewskiej gry jak&aogon; s&aogon; szachy oraz
-      nieustanna che&cacute;&nbsp;rywalizacji oraz
-      zwi&eogon;kszania w&lstrok;asnych umiej&eogon;tno&sacute;ci w tej wspania&lstrok;ej grze.<p></p></main><footer><amp-img alt="board" src="static/svg/board.svg" width="128" height="128"></amp-img></footer></body></html>
+    transition-delay: 0.075s; }</style><script async="" custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async="" custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script><script async="" custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script><script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script><script async="" custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script><script async="" custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async="" custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script><script custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async=""></script><script custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" async=""></script></head><body><header id="header-xl"><amp-mega-menu id="menu" height="46" layout="fixed-height"><nav style="display: flex;flex-direction: row; height: 100%; align-items: center;"><ul id="hide-xs"><li><span class="flex-center font-logo"><amp-img alt="A view of the sea" src="static/svg/chess-knight-solid.svg" width="40" height="40"></amp-img>Knight</span></li><li class="menu-item font-roboto"><span role="button">O nas</span><div class="content-menu" role="dialog"><ul><li>item 1</li><li>item 2</li><li>item 3</li></ul></div></li><li class="menu-item font-roboto"><a href="wydarzenia.html">Wydarzenia</a></li><li class="menu-item font-roboto"><a href="https://amp.dev/">Do&lstrok;&aogon;cz do nas</a></li></ul></nav></amp-mega-menu></header><header id="header-xs"><span class="flex-center font-logo"><amp-img alt="A view of the sea" src="static/svg/chess-knight-solid.svg" width="40" height="40"></amp-img>Knight</span><button class="sidebar-open-btn hamburger hamburger--elastic" id="list" on="tap:sidebar.toggle"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></header><amp-sidebar id="sidebar" layout="nodisplay" side="right" on="sidebarClose:list.toggleClass(class='is-active'); sidebarOpen:list.toggleClass(class='is-active')"><ul><li>O nas<ul><li>1</li><li>2</li></ul></li><li>Nav item 3</li><li>Nav item 5</li><li>Nav item 6</li></ul></amp-sidebar><main class="font-roboto"><h3>O nas</h3><p>Jeste&sacute;my klubem szachowym politechniki &lstrok;&oacute;dzkiej, &lstrok;&aogon;czy nas mi&lstrok;o&sacute;&cacute; do kr&oacute;lewskiej gry jak&aogon; s&aogon; szachy oraz
+nieustanna che&cacute;&nbsp;rywalizacji oraz
+zwi&eogon;kszania w&lstrok;asnych umiej&eogon;tno&sacute;ci w tej wspania&lstrok;ej grze.</p><h3>Członkowie</h3><p>Jeste&sacute;my klubem szachowym politechniki &lstrok;&oacute;dzkiej, &lstrok;&aogon;czy nas mi&lstrok;o&sacute;&cacute; do kr&oacute;lewskiej gry jak&aogon; s&aogon; szachy oraz
+nieustanna che&cacute;&nbsp;rywalizacji oraz
+zwi&eogon;kszania w&lstrok;asnych umiej&eogon;tno&sacute;ci w tej wspania&lstrok;ej grze.</p><amp-list width="auto" height="100" layout="fixed-height" src="static/data/players.json"></amp-list><template type="amp-mustache"><div class="url-entry"><a href="{{url}}">{{title}}</a></div></template></main><footer><amp-img alt="board" src="static/svg/board.svg" width="128" height="128"></amp-img></footer></body></html>

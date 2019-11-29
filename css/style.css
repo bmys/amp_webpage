@@ -122,7 +122,6 @@ footer>amp-img
 main
 {
   flex: 1;
-  padding: 15px 150px;
 }
 
 amp-mega-menu
@@ -158,9 +157,16 @@ amp-mega-menu .menu-item[open] > div
     display: flex;
   }
 
-  main{
+  section{
     margin-top: 44px;
     padding: 15px;
+  }
+}
+
+@media (min-width: 1200px)
+{
+  section{
+    padding: 0 350px;
   }
 }
 
@@ -184,4 +190,27 @@ ul
 a
 {
   color: white;
+}
+
+amp-list div[role='list'] {
+  display: grid;
+  grid-gap: 0.5em;
+  color: black
+}
+
+.url-entry > a{
+  color: black;
+}
+
+#members{
+  background: #000;
+  color: #fff;
+  margin-bottom: -1px;
+  padding-top: 15px;
+}
+
+.divider-chess{
+  width: 100%;
+  background-image: url("static/svg/divider.svg");
+  height: 64px;
 }
