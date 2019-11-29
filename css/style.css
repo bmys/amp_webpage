@@ -122,7 +122,7 @@ footer>amp-img
 main
 {
   flex: 1;
-  padding: 15px;
+  padding: 15px 150px;
 }
 
 amp-mega-menu
@@ -160,6 +160,7 @@ amp-mega-menu .menu-item[open] > div
 
   main{
     margin-top: 44px;
+    padding: 15px;
   }
 }
 
