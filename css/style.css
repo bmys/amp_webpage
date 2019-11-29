@@ -157,12 +157,23 @@ amp-mega-menu .menu-item[open] > div
   {
     display: flex;
   }
+
+  main{
+    margin-top: 44px;
+  }
 }
 
 #sidebar
 {
   top: 44px;
+  width: 50vw;
 }
+
+ul
+{
+  list-style: none;
+}
+
 
 .font-roboto
 {
