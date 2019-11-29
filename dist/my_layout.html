@@ -210,6 +210,23 @@ amp-mega-menu .menu-item[open] > div
   section{
     padding: 15px;
   }
+
+  .user-entry{
+    flex-direction: column;
+  }
+
+  .user-entry > *{
+    display: flex;
+    justify-content: center;
+  }
+  .user-entry > .about{
+    flex-direction: column;
+  }
+  .user-entry > .about > h3{
+    text-align: center;
+  }
+  
+
 }
 
 @media (min-width: 1200px)
@@ -285,19 +302,18 @@ amp-sidebar > ul > li > ul{
 }
 
 .user-entry {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 0.5fr 1fr;
   grid-template-rows: 0.5fr 0.25fr;
   grid-column-gap: 25px;
-  grid-row-gap: 10px;
+  grid-row-gap: 10px; */
+  display: flex;
   /* grid-template-areas: "photo about" "stas about"; */
   color: white;
 }
 
-.photo {
-  grid-area: 1 / 1 / 2 / 2;
-  
-  }
+.photo { }
+
   .photo-inner{
     border: 2px solid white;
     padding: 10px;
@@ -310,7 +326,9 @@ amp-sidebar > ul > li > ul{
   }
 
 
-.about {grid-area: 1 / 2 / 2 / 3; }
+.about {
+  padding: 0 15px;
+}
 .about > h3{
   margin-top: 0;
 }
