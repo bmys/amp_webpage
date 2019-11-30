@@ -1,5 +1,11 @@
 main.font-roboto
-  amp-youtube(autoplay loop data-videoid='8D_rLRqFEnE' layout='responsive' width='1920' height='1080')
+  amp-video(width='640' height='360' layout='responsive' autoplay loop)
+    source(src='https://pythonic.pl/static/videos/1.webm' type='video/webm')
+    source(src='https://pythonic.pl/static/videos/1.mp4' type='video/mp4')
+    div(fallback='')
+      p This browser does not support the video element.
+
+  //- amp-youtube(autoplay loop data-videoid='8D_rLRqFEnE' layout='responsive' width='1920' height='1080')
   section#aboutus
     h1 O nas
     p
