@@ -1,0 +1,24 @@
+main.font-roboto
+  amp-video(width='640' height='360' layout='responsive' autoplay loop)
+    source(src='https://pythonic.pl/static/videos/1.webm' type='video/webm')
+    source(src='https://pythonic.pl/static/videos/1.mp4' type='video/mp4')
+    div(fallback='')
+      p This browser does not support the video element.
+
+
+  section#join
+    | Hello
+    
+  section#kontakt
+    h3 Kontakt
+    ul
+      li Telefon +(44) 880 123 456
+      li E-mail test@p.lodz.pl
+      li Adres Wolczanska 123 Łódź
+    p.social-share
+      amp-social-share(type='twitter' width='60' height='44')
+      amp-social-share(type='facebook' width='60' height='44' data-attribution='254325784911610')  
+      amp-social-share(type='email' width='60' height='44')
+      amp-social-share(type='pinterest' width='66' height='44')
+      amp-social-share(type='system' width='66' height='44')
+    amp-img(src='/static/img/map.png' width='400' height='200' alt='an image')
