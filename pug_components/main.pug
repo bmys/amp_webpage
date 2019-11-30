@@ -15,7 +15,7 @@ main.font-roboto
   .divider-chess
   section#members   
     h3 Członkowie  
-    amp-list(credentials="include" width='auto' height='800' layout='fixed-height' src='static/data/players.json')
+    amp-list(width='auto' height='800' layout='fixed-height' src='https://pythonic.pl/members')
       template(type='amp-mustache')
         .user-entry(amp-fx="fade-in" data-duration="2000ms" data-easing="cubic-bezier(0.40, 0.00, 0.40, 1.00)")
           .photo
@@ -30,10 +30,12 @@ main.font-roboto
           //-   | {{stats}}
     
   amp-fx-flying-carpet(height='300px')
-    amp-img(src='/static//img/chess.webp' width='1920' height='1080' alt='an image')
+    amp-img(src='/static/img/chess.webp' width='1920' height='1080' alt='an image')
 
   section
     h3 Kontakt
+    p 
+      | Telefon +(44) 880 123 456
     p.social-share
       amp-social-share(type='twitter' width='60' height='44')
       amp-social-share(type='facebook' width='60' height='44' data-attribution='254325784911610')  
