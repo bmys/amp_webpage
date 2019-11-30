@@ -32,15 +32,16 @@ main.font-roboto
   amp-fx-flying-carpet(height='300px')
     amp-img(src='/static/img/chess.webp' width='1920' height='1080' alt='an image')
 
-  section
+  section#kontakt
     h3 Kontakt
-    p 
-      | Telefon +(44) 880 123 456
+    ul
+      li Telefon +(44) 880 123 456
+      li E-mail test@p.lodz.pl
+      li Adres Wolczanska 123 Łódź
     p.social-share
       amp-social-share(type='twitter' width='60' height='44')
       amp-social-share(type='facebook' width='60' height='44' data-attribution='254325784911610')  
       amp-social-share(type='email' width='60' height='44')
       amp-social-share(type='pinterest' width='66' height='44')
       amp-social-share(type='system' width='66' height='44')
-
-    amp-iframe(title='Embedded Google map' width='400' height='200' layout='responsive' sandbox='allow-scripts allow-same-origin allow-popups' frameborder='0' src='https://www.google.com/maps/embed/v1/place?&q=iceland')
+    amp-img(src='/static/img/map.png' width='400' height='200' alt='an image')

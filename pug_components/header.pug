@@ -10,11 +10,12 @@ header#header-xl
           span(role='button') O nas
           .content-menu(role='dialog')
             ul
-              li Informacje
-              li Członkowie
-              li item 3
+              li(on="tap:aboutus.scrollTo(duration=200)")  Informacje
+              li(on="tap:members.scrollTo(duration=200)")
+                | Członkowie
+              li(on="tap:kontakt.scrollTo(duration=200)") Kontakt
         li.menu-item.font-roboto
-          a(href='https://amp.dev/') Do&lstrok;&aogon;cz do nas
+          a(href='join.html') Do&lstrok;&aogon;cz do nas
           
 header#header-xs
   span.flex-center.font-logo
