@@ -6,22 +6,21 @@ main.font-roboto
       p This browser does not support the video element.
 
 
-  section#join
+  section
     form(method='post' action-xhr='https://example.com/subscribe' target='_top')
-    fieldset
-        label
-        span Imie:
-        input(type='text' name='name' required='')
-        br
-        label
-        span Nazwisko:
-        input(type='text' name='name' required='')
-        br
-        label
-        span Email:
-        input(type='email' name='email' required='')
-        br
-        input(type='submit' value='Wyślij')
+      label
+        |Imie
+      input(type='text' name='name' required='')
+      br
+      label
+        |Nazwisko
+      input(type='text' name='name' required='')
+      br
+      label
+        |Email
+      input(type='email' name='email' required='')
+      br
+      input(type='submit' value='Wyślij')
     
   section#kontakt
     h3 Kontakt

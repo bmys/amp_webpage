@@ -5,3 +5,5 @@ upload
 dist/static/icon
 dist/static/img
 dist/static/videos
+*.zip
+*.odt

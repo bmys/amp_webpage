@@ -1,512 +1,410 @@
-<!DOCTYPE html>
-<html ⚡>
+<!DOCTYPE html><html ⚡> <head><meta charset="utf-8"><script async="" src="https://cdn.ampproject.org/v0.js"></script><link rel="canonical" href="#{canonical}"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><meta name="description" content="#{description}"><meta name="theme-color" content="#000000"><title>Knight Klub Szachowy</title><link rel="icon" type="image/png" sizes="32x32" href="static/icon/favicon-32x32.png"><style amp-boilerplate="">body {
+-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+animation: -amp-start 8s steps(1, end) 0s 1 normal both
+}
+@-webkit-keyframes -amp-start {
+from {
+visibility: hidden
+}
+to {
+visibility: visible
+}
+}
+@-moz-keyframes -amp-start {
+from {
+visibility: hidden
+}
+to {
+visibility: visible
+}
+}
+@-ms-keyframes -amp-start {
+from {
+visibility: hidden
+}
+to {
+visibility: visible
+}
+}
+@-o-keyframes -amp-start {
+from {
+visibility: hidden
+}
+to {
+visibility: visible
+}
+}
+@keyframes -amp-start {
+from {
+visibility: hidden
+}
+to {
+visibility: visible
+}
+}</style><noscript><style amp-boilerplate="">body {
+-webkit-animation: none;
+-moz-animation: none;
+-ms-animation: none;
+animation: none
+}</style></noscript><style amp-custom="">body
+{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-<head>
-    <meta charset="utf-8">
-    <script async="" src="https://cdn.ampproject.org/v0.js"></script>
-    <link rel="canonical" href="#{canonical}">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <meta name="description" content="#{description}">
-    <meta name="theme-color" content="#000000">
-    <title>Knight Klub Szachowy</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="static/icon/favicon-32x32.png">
-    <style amp-boilerplate="">
-        body {
-            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            animation: -amp-start 8s steps(1, end) 0s 1 normal both
-        }
-        
-        @-webkit-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-        
-        @-moz-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-        
-        @-ms-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-        
-        @-o-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-        
-        @keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-    </style>
-    <noscript>
-        <style amp-boilerplate="">
-            body {
-                -webkit-animation: none;
-                -moz-animation: none;
-                -ms-animation: none;
-                animation: none
-            }
-        </style>
-    </noscript>
-    <style amp-custom="">
-        body {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        header {
-            display: flex;
-            background-color: black;
-            color: white;
-        }
-        
-        #header-xs {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: none;
-            z-index: 2147483647;
-            padding: 2px;
-        }
-        
-        #header-xs > .font-logo {
-            flex: 1;
-        }
-        
-        .title {
-            background-color: lightblue;
-            padding: 0.5em;
-            margin: 0;
-        }
-        
-        amp-mega-menu>nav {
-            background: #000;
-            color: white;
-        }
-        
-        amp-mega-menu>nav>ul {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding-inline-start: 10px;
-        }
-        
-        amp-mega-menu>nav>ul>li {
-            margin-right: 15px;
-        }
-        
-        amp-mega-menu .menu-item[open]>span {
-            background-color: black;
-        }
-        
-        amp-mega-menu .menu-item[open]>div {
-            left: 10px;
-            right: 10px;
-            width: auto;
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        
-        a:visited {
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        .flex-center {
-            display: flex;
-            align-items: center;
-        }
-        
-        .content-menu {
-            top: 46px;
-            background: black;
-        }
-        
-        .content {
-            position: absolute;
-            height: 128px;
-            bottom: 0;
-            right: 0;
-        }
-        
-        .max-h {
-            min-height: 100vh;
-        }
-        
-        .font-logo {
-            font-size: 1.4em;
-        }
-        
-        footer {
-            background: #000;
-            height: 128px;
-        }
-        
-        footer>amp-img {
-            float: right;
-        }
-        
-        main {
-            flex: 1;
-        }
-        
-        amp-mega-menu {
-            flex: 1;
-        }
-        
-        amp-mega-menu .menu-item[open] > div {
-            background: #000;
-        }
-        
-        .sidebar-open-btn {
-            font-size: 2em;
-            display: none;
-        }
-        
-        @media (max-width: 500px) {
-            #hide-xs,
-            #header-xl {
-                display: none;
-            }
-            .sidebar-open-btn {
-                display: block;
-            }
-            #header-xs {
-                display: flex;
-            }
-            section {
-                padding: 15px;
-            }
-            .user-entry {
-                flex-direction: column;
-            }
-            .user-entry > * {
-                display: flex;
-                justify-content: center;
-            }
-            .user-entry > .about {
-                flex-direction: column;
-            }
-            .user-entry > .about > h3 {
-                text-align: center;
-            }
-        }
-        
-        @media (min-width: 1200px) {
-            section {
-                padding: 0 350px;
-            }
-        }
-        
-        #sidebar {
-            top: 44px;
-            width: 50vw;
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
-        .font-roboto {
-            font-family: 'Roboto', sans-serif;
-        }
-        
-        a {
-            color: white;
-        }
-        
-        amp-list div[role='list'] {
-            display: grid;
-            grid-gap: 0.5em;
-            color: black
-        }
-        
-        #members {
-            background: #000;
-            color: #fff;
-            margin-bottom: -1px;
-            padding-top: 15px;
-        }
-        
-        .divider-chess {
-            width: 100%;
-            background-image: url("static/svg/divider.svg");
-            height: 64px;
-        }
-        
-        #aboutus {
-            padding-bottom: 25px;
-        }
-        
-        amp-sidebar {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 1.2em;
-            background-image: url("static/svg/board.svg");
-            background-size: contain;
-            background-position: bottom;
-            background-repeat: no-repeat;
-        }
-        
-        amp-sidebar > ul {
-            padding-top: 15px;
-            padding-left: 15px;
-        }
-        
-        amp-sidebar > ul > li > ul {
-            padding: 5px 10px 10px 10px;
-            font-size: 0.8em
-        }
-        
-        .user-entry {
-            /* display: grid;
+header
+{
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+#header-xs
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 2147483647;
+  padding: 2px;
+}
+
+#header-xs > .font-logo
+{
+  flex: 1;
+}
+
+.title
+{
+  background-color: lightblue;
+  padding: 0.5em;
+  margin: 0;
+}
+
+amp-mega-menu>nav
+{
+  background: #000;
+  color: white;
+}
+
+amp-mega-menu>nav>ul
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-inline-start: 10px;
+}
+
+amp-mega-menu>nav>ul>li
+{
+  margin-right: 15px;
+}
+
+amp-mega-menu .menu-item[open]>span
+{
+  background-color: black;
+}
+
+amp-mega-menu .menu-item[open]>div
+{
+  left: 10px;
+  right: 10px;
+  width: auto;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+a:visited
+{
+  color: #fff;
+  text-decoration: none;
+}
+
+.flex-center
+{
+  display: flex;
+  align-items: center;
+}
+
+.content-menu
+{
+  top: 46px;
+  background: black;
+}
+
+.content
+{
+  position: absolute;
+  height: 128px;
+  bottom: 0;
+  right: 0;
+}
+
+.max-h
+{
+  min-height: 100vh;
+}
+
+.font-logo
+{
+  font-size: 1.4em;
+}
+
+footer
+{
+  background: #000;
+  height: 128px;
+}
+
+footer>amp-img
+{
+  float: right;
+}
+
+main
+{
+  flex: 1;
+}
+
+amp-mega-menu
+{
+  flex: 1;
+}
+
+amp-mega-menu .menu-item[open] > div
+{
+  background: #000;
+}
+
+.sidebar-open-btn
+{
+  font-size: 2em;
+  display: none;
+}
+
+@media (max-width: 500px)
+{
+  #hide-xs, #header-xl
+  {
+    display: none;
+  }
+
+  .sidebar-open-btn
+  {
+    display: block;
+  }
+
+  #header-xs
+  {
+    display: flex;
+  }
+
+  section{
+    padding: 15px;
+  }
+
+  .user-entry{
+    flex-direction: column;
+  }
+
+  .user-entry > *{
+    display: flex;
+    justify-content: center;
+  }
+  .user-entry > .about{
+    flex-direction: column;
+  }
+  .user-entry > .about > h3{
+    text-align: center;
+  }
+  
+
+}
+
+@media (min-width: 1200px)
+{
+  section{
+    padding: 0 350px;
+  }
+}
+
+#sidebar
+{
+  top: 44px;
+  width: 50vw;
+}
+
+ul
+{
+  list-style: none;
+}
+
+
+.font-roboto
+{
+  font-family: 'Roboto', sans-serif;
+}
+
+a
+{
+  color: white;
+}
+
+amp-list div[role='list'] {
+  display: grid;
+  grid-gap: 0.5em;
+  color: black
+}
+
+#members{
+  background: #000;
+  color: #fff;
+  margin-bottom: -1px;
+  padding-top: 15px;
+}
+
+.divider-chess{
+  width: 100%;
+  background-image: url("static/svg/divider.svg");
+  height: 64px;
+}
+
+#aboutus{
+  padding-bottom: 25px;
+}
+
+amp-sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+  background-image: url("static/svg/board.svg");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+amp-sidebar > ul{
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+amp-sidebar > ul > li > ul{
+  padding: 5px 10px 10px 10px;
+  font-size: 0.8em
+}
+
+.user-entry {
+  /* display: grid;
   grid-template-columns: 0.5fr 1fr;
   grid-template-rows: 0.5fr 0.25fr;
   grid-column-gap: 25px;
   grid-row-gap: 10px; */
-            display: flex;
-            /* grid-template-areas: "photo about" "stas about"; */
-            color: white;
-        }
-        
-        .photo {}
-        
-        .photo-inner {
-            border: 2px solid white;
-            padding: 10px;
-            width: 200px;
-            height: 200px;
-            border-radius: 180px;
-        }
-        
-        .photo-inner > amp-img {
-            border-radius: 180px;
-        }
-        
-        .about {
-            padding: 0 15px;
-        }
-        
-        .about > h3 {
-            margin-top: 0;
-        }
-        /* .stats { grid-area: 2 / 1 / 3 / 2;  } */
-        
-        .hamburger {
-            padding: 0px 15px;
-            display: inline-block;
-            cursor: pointer;
-            transition-property: opacity, filter;
-            transition-duration: 0.15s;
-            transition-timing-function: linear;
-            font: inherit;
-            color: inherit;
-            text-transform: none;
-            background-color: transparent;
-            border: 0;
-            margin: 0;
-            overflow: visible;
-        }
-        
-        .hamburger:hover {
-            opacity: 0.7;
-        }
-        
-        .hamburger.is-active:hover {
-            opacity: 0.7;
-        }
-        
-        .hamburger.is-active .hamburger-inner,
-        .hamburger.is-active .hamburger-inner::before,
-        .hamburger.is-active .hamburger-inner::after {
-            background-color: #fff;
-        }
-        
-        .hamburger-box {
-            width: 40px;
-            height: 24px;
-            display: inline-block;
-            position: relative;
-        }
-        
-        .hamburger-inner {
-            display: block;
-            top: 50%;
-            margin-top: -2px;
-        }
-        
-        .hamburger-inner,
-        .hamburger-inner::before,
-        .hamburger-inner::after {
-            width: 40px;
-            height: 4px;
-            background-color: #fff;
-            border-radius: 4px;
-            position: absolute;
-            transition-property: transform;
-            transition-duration: 0.15s;
-            transition-timing-function: ease;
-        }
-        
-        .hamburger-inner::before,
-        .hamburger-inner::after {
-            content: "";
-            display: block;
-        }
-        
-        .hamburger-inner::before {
-            top: -10px;
-        }
-        
-        .hamburger-inner::after {
-            bottom: -10px;
-        }
-        
-        .hamburger--elastic .hamburger-inner {
-            top: 2px;
-            transition-duration: 0.275s;
-            transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-        
-        .hamburger--elastic .hamburger-inner::before {
-            top: 10px;
-            transition: opacity 0.125s 0.275s ease;
-        }
-        
-        .hamburger--elastic .hamburger-inner::after {
-            top: 20px;
-            transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-        
-        .hamburger--elastic.is-active .hamburger-inner {
-            transform: translate3d(0, 10px, 0) rotate(135deg);
-            transition-delay: 0.075s;
-        }
-        
-        .hamburger--elastic.is-active .hamburger-inner::before {
-            transition-delay: 0s;
-            opacity: 0;
-        }
-        
-        .hamburger--elastic.is-active .hamburger-inner::after {
-            transform: translate3d(0, -20px, 0) rotate(-270deg);
-            transition-delay: 0.075s;
-        }
-    </style>
-    <script async="" custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
-    <script async="" custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    <script async="" custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-    <script custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async=""></script>
-    <script custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" async=""></script>
-    <script async="" custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-    <script async="" custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
-    <script async="" custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js"></script>
-    <script async="" custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
-    <script async="" custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
-    <script async="" custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-</head>
+  display: flex;
+  /* grid-template-areas: "photo about" "stas about"; */
+  color: white;
+}
 
-<body>
-    <header id="header-xl">
-        <amp-mega-menu id="menu" height="46" layout="fixed-height">
-            <nav style="display: flex;flex-direction: row; height: 100%; align-items: center;">
-                <ul id="hide-xs">
-                    <li><span class="flex-center font-logo"><amp-img alt="A view of the sea" src="static/svg/chess-knight-solid.svg" width="40" height="40"></amp-img>Knight</span></li>
-                    <li class="menu-item font-roboto"><a href="index.html">O nas</a></li>
-                 
-                    <li class="menu-item font-roboto">Do&lstrok;&aogon;cz do nas</li>
-                </ul>
-            </nav>
-        </amp-mega-menu>
-    </header>
-    <header id="header-xs"><span class="flex-center font-logo"><amp-img alt="A view of the sea" src="static/svg/chess-knight-solid.svg" width="40" height="40"></amp-img>Knight</span>
-        <button class="sidebar-open-btn hamburger hamburger--elastic" id="list" on="tap:sidebar.toggle"><span class="hamburger-box"><span class="hamburger-inner"></span></span>
-        </button>
-    </header>
-    <amp-sidebar class="font-roboto" id="sidebar" layout="nodisplay" side="right" on="sidebarClose:list.toggleClass(class='is-active'); sidebarOpen:list.toggleClass(class='is-active')">
-        <ul>
-            <li>
-          
-                   <a href="index.html"> O nas</a>
-                 
-            </li>
-            <li> Dołącz do nas</li>
-        </ul>
-    </amp-sidebar>
-    <main class="font-roboto">
-        <amp-video width="640" height="360" layout="responsive" autoplay loop>
-            <source src="https://pythonic.pl/static/videos/1.webm" type="video/webm">
-            <source src="https://pythonic.pl/static/videos/1.mp4" type="video/mp4">
-            <div fallback="">
-                <p>This browser does not support the video element.</p>
-            </div>
-        </amp-video>
-        <section id="join">
-            <form method="post" action-xhr="https://example.com/subscribe" target="_top"></form>
-            <fieldset>
-                <label></label><span>Imie:</span>
-                <input type="text" name="name" required="">
-                <br>
-                <label></label><span>Nazwisko:</span>
-                <input type="text" name="name" required="">
-                <br>
-                <label></label><span>Email:</span>
-                <input type="email" name="email" required="">
-                <br>
-                <input type="submit" value="Wyślij">
-            </fieldset>
-        </section>
-        <section id="kontakt">
-            <h3>Kontakt</h3>
-            <ul>
-                <li>Telefon +(44) 880 123 456</li>
-                <li>E-mail test@p.lodz.pl</li>
-                <li>Adres Wolczanska 123 Łódź</li>
-            </ul>
-            <p class="social-share">
-                <amp-social-share type="twitter" width="60" height="44"></amp-social-share>
-                <amp-social-share type="facebook" width="60" height="44" data-attribution="254325784911610"> </amp-social-share>
-                <amp-social-share type="email" width="60" height="44"></amp-social-share>
-                <amp-social-share type="pinterest" width="66" height="44"></amp-social-share>
-                <amp-social-share type="system" width="66" height="44"></amp-social-share>
-            </p>
-            <amp-img src="/static/img/map.png" width="400" height="200" alt="an image"></amp-img>
-        </section>
-    </main>
-    <footer>
-        <amp-img alt="board" src="static/svg/board.svg" width="128" height="128"></amp-img>
-    </footer>
-</body>
+.photo { }
 
-</html>
+  .photo-inner{
+    border: 2px solid white;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 180px;
+  }
+  .photo-inner > amp-img{
+    border-radius: 180px;
+  }
+
+
+.about {
+  padding: 0 15px;
+}
+.about > h3{
+  margin-top: 0;
+}
+/* .stats { grid-area: 2 / 1 / 3 / 2;  } */
+.hamburger {
+    padding: 0px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible; }
+    .hamburger:hover {
+    opacity: 0.7; }
+    .hamburger.is-active:hover {
+    opacity: 0.7; }
+    .hamburger.is-active .hamburger-inner,
+    .hamburger.is-active .hamburger-inner::before,
+    .hamburger.is-active .hamburger-inner::after {
+    background-color: #fff; }
+    .hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative; }
+    .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px; }
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+    .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+    .hamburger-inner::before {
+    top: -10px; }
+    .hamburger-inner::after {
+    bottom: -10px; }
+    .hamburger--elastic .hamburger-inner {
+    top: 2px;
+    transition-duration: 0.275s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    .hamburger--elastic .hamburger-inner::before {
+    top: 10px;
+    transition: opacity 0.125s 0.275s ease; }
+    .hamburger--elastic .hamburger-inner::after {
+    top: 20px;
+    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    .hamburger--elastic.is-active .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(135deg);
+    transition-delay: 0.075s; }
+    .hamburger--elastic.is-active .hamburger-inner::before {
+    transition-delay: 0s;
+    opacity: 0; }
+    .hamburger--elastic.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-270deg);
+    transition-delay: 0.075s; }form{
+    display: flex;
+    flex-direction: column;
+}
+
+input, button{
+    height: 2em;
+    font-size: 1.5em;
+}
+</style><script async="" custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script><script async="" custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async="" custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script><script custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async=""></script><script custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" async=""></script><script async="" custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script><script async="" custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script><script async="" custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js"></script><script async="" custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script><script async="" custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script><script async="" custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script></head><body><header id="header-xl"><amp-mega-menu id="menu" height="46" layout="fixed-height"><nav style="display: flex;flex-direction: row; height: 100%; align-items: center;"><ul id="hide-xs"><li><span class="flex-center font-logo"><amp-img alt="A view of the sea" src="static/svg/chess-knight-solid.svg" width="40" height="40"></amp-img>Knight</span></li><li class="menu-item font-roboto"><span role="button">O nas</span><div class="content-menu" role="dialog"><ul><li on="tap:aboutus.scrollTo(duration=200)"> Informacje</li><li on="tap:members.scrollTo(duration=200)">Członkowie</li><li on="tap:kontakt.scrollTo(duration=200)">Kontakt</li></ul></div></li><li class="menu-item font-roboto"><a href="join.html">Do&lstrok;&aogon;cz do nas</a></li></ul></nav></amp-mega-menu></header><header id="header-xs"><span class="flex-center font-logo"><amp-img alt="A view of the sea" src="static/svg/chess-knight-solid.svg" width="40" height="40"></amp-img>Knight</span><button class="sidebar-open-btn hamburger hamburger--elastic" id="list" on="tap:sidebar.toggle"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></header><amp-sidebar class="font-roboto" id="sidebar" layout="nodisplay" side="right" on="sidebarClose:list.toggleClass(class='is-active'); sidebarOpen:list.toggleClass(class='is-active')"><ul><li>O nas<ul><li><a href="#aboutus"> Informacje</a></li><li><a href="#members">Członkowie</a></li><li><a href="#kontakt">Kontakt</a></li></ul></li><li> <a href="join.html">Dołącz do nas</a></li></ul></amp-sidebar><main class="font-roboto"><amp-video width="640" height="360" layout="responsive" autoplay loop><source src="https://pythonic.pl/static/videos/1.webm" type="video/webm"><source src="https://pythonic.pl/static/videos/1.mp4" type="video/mp4"><div fallback=""><p>This browser does not support the video element.</p></div></amp-video><section><form method="post" action-xhr="https://example.com/subscribe" target="_top"><label>Imie</label><input type="text" name="name" required=""><br><label>Nazwisko</label><input type="text" name="name" required=""><br><label>Email</label><input type="email" name="email" required=""><br><input type="submit" value="Wyślij"></form></section><section id="kontakt"><h3>Kontakt</h3><ul><li>Telefon +(44) 880 123 456</li><li>E-mail test@p.lodz.pl</li><li>Adres Wolczanska 123 Łódź</li></ul><p class="social-share"><amp-social-share type="twitter" width="60" height="44"></amp-social-share><amp-social-share type="facebook" width="60" height="44" data-attribution="254325784911610"> </amp-social-share><amp-social-share type="email" width="60" height="44"></amp-social-share><amp-social-share type="pinterest" width="66" height="44"></amp-social-share><amp-social-share type="system" width="66" height="44"></amp-social-share></p><amp-img src="/static/img/map.png" width="400" height="200" alt="an image"></amp-img></section></main><footer><amp-img alt="board" src="static/svg/board.svg" width="128" height="128"></amp-img></footer></body></html>
