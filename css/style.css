@@ -13,6 +13,14 @@ header
   color: white;
 }
 
+amp-sidebar > ul > li > ul > li > a{
+  color: black;
+}
+
+#sidebar > ul > li > a{
+  color: gray;
+}
+
 #header-xs
 {
   position: fixed;
