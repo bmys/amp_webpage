@@ -79,6 +79,10 @@ amp-mega-menu .menu-item[open]>div
   background: black;
 }
 
+.text-center{
+  text-align: center;
+}
+
 amp-fit-text{
   background: white;
 }
