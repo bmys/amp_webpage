@@ -75,6 +75,14 @@ amp-mega-menu .menu-item[open]>div
   width: auto;
 }
 
+.slide{
+  background: black;
+}
+
+amp-fit-text{
+  background: white;
+}
+
 a
 {
   text-decoration: none;

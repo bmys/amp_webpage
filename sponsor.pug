@@ -3,10 +3,22 @@ extends pug_amp/base_amp
 block content
     include pug_components/header
     include pug_components/sidebar
-    include pug_components/main_join
+    include pug_components/main_sponsor
 
 block footer
     footer
+        div(style='display:inline-block; color:white; font-size:0.5em')
+            div
+                | Icons made by 
+                a(href='https://www.flaticon.com/authors/dinosoftlabs' title='DinosoftLabs') DinosoftLabs
+                |  from 
+                a(href='https://www.flaticon.com/' title='Flaticon') www.flaticon.com
+            div
+                | Icons made by 
+                a(href='https://www.flaticon.com/authors/pixel-perfect' title='Pixel perfect') Pixel perfect
+                |  from 
+                a(href='https://www.flaticon.com/' title='Flaticon') www.flaticon.com
+
         amp-img(alt='board' src='static/svg/board.svg' width='128' height='128')
 
 
